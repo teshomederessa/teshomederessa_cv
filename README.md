@@ -1,12 +1,8 @@
 ---
 title: ""
-pagetitle: "Teshome K. Deressa, PhD - CV"
 output:
-  html_document:
-    theme: null
-    highlight: null
-    self_contained: true
-    css: cv.css
+  github_document:
+    html_preview: false
 ---
 
 ```{r setup, include=FALSE}
