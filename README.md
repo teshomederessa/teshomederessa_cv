@@ -1,31 +1,3 @@
----
-output:
-  github_document:
-    html_preview: false
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
-
-# Prints a numbered list that counts DOWN (newest = highest number).
-# Numbers are written as "7\." so Markdown treats them as plain text
-# and does NOT turn them into an auto-numbered (counting-up) list.
-print_countdown <- function(df, my_name = "Deressa, T.K.") {
-  # newest first
-  df <- df[order(-df$year), ]
-  n  <- nrow(df)
-
-  # bold own name automatically
-  txt <- gsub(my_name, paste0("**", my_name, "**"), df$text, fixed = TRUE)
-
-  # optional extra line (e.g. media attention)
-  extra <- ifelse(is.na(df$note) | df$note == "", "",
-                  paste0("<br>&emsp;&emsp;", df$note))
-
-  cat(paste0(n:1, "\\. ", txt, extra, "\n\n", collapse = ""))
-}
-```
-
 <h2 align="center">Teshome K. Deressa, PhD</h2>
 
 ### Experience
@@ -88,27 +60,19 @@ print_countdown <- function(df, my_name = "Deressa, T.K.") {
 
 ### Publications
 
-```{r publications, results='asis'}
-pubs <- data.frame(
-  year = c(2023, 2024, 2024, 2020, 2016, 2014, 2012),
-  text = c(
-    "Deressa, T.K., Stern, D., Vangronsveld, J., Minx, J., Lizin, S., Malina, R. and Bruns, S., 2023. More than half of statistically significant research findings in the environmental sciences are actually not. _Preprint_. [DOI](https://doi.org/10.32942/X24G6Z).",
-    "Bruns, S.B., Deressa, T.K., Stanley, T.D., Doucouliagos, C. and Ioannidis, J.P., 2024. Estimating the extent of selective reporting: An application to economics. _Res. Synth. Methods_, 15(4), pp.590-602. [DOI](https://doi.org/10.1002/jrsm.1711).",
-    "Bartoš, F., Maier, M., Wagenmakers, E.J., Nippold, F., Doucouliagos, H., Ioannidis, J.P., Otte, W.M., Sladekova, M., Deressa, T.K., Bruns, S.B. and Fanelli, D., 2024. Footprint of publication selection bias on meta-analyses in medicine, environmental sciences, psychology, and economics. _Res. Synth. Methods_, 15(3), pp.500-511. [DOI](https://doi.org/10.1002/jrsm.1703).",
-    "Sebu, A.T., Genati, K.T., Bekalo, D.B. and Deressa, T.K., 2020. Spatiotemporal dynamics of tuberculosis in East Hararge zone, Oromiya region, Ethiopia. _Spat. Inf. Res._, 28(6), pp.623-633. [DOI](https://doi.org/10.1007/s41324-020-00319-9).",
-    "Temesgen, A. and Deressa, T.K., 2016. Joint modeling of longitudinal CD4 count and weight measurements of HIV/tuberculosis co-infected patients at Jimma University specialized hospital. _Ann. Data Sc._, 3(3), pp.321-338. [DOI](https://doi.org/10.1007/s40745-016-0085-9).",
-    "Geneti, Kasahun T. and Deressa, T.K. 2014. Correlates of under-five child mortality in Ethiopia: A logistic regression analysis. _Adv. App. Stat._ 39 (1): 61.",
-    "Deressa, T.K. 2012. Application of multilevel logistic model to identify correlates of poverty in Ethiopia. _East Afr. J. Sci._ 6(2): 137-146."
-  ),
-  note = c(
-    "Media attention: **De Morgen** in Dutch - [www.demorgen.be](https://www.demorgen.be/nieuws/meer-dan-de-helft-van-het-onderzoek-in-de-milieuwetenschappen-deugt-niet-studies-beweren-dingen-die-onvoldoende-onderbouwd-zijn~bca6f9d4/) and **Le Point** in French - [www.lepoint.fr](https://www.lepoint.fr/environnement/sciences-de-l-environnement-donnees-robustes-ou-conjectures-incertaines-31-01-2023-2506970_1927.php#11).",
-    "", "", "", "", "", ""
-  ),
-  stringsAsFactors = FALSE
-)
+7\. Bruns, S.B., **Deressa, T.K.**, Stanley, T.D., Doucouliagos, C. and Ioannidis, J.P., 2024. Estimating the extent of selective reporting: An application to economics. _Res. Synth. Methods_, 15(4), pp.590-602. [DOI](https://doi.org/10.1002/jrsm.1711).
 
-print_countdown(pubs)
-```
+6\. Bartoš, F., Maier, M., Wagenmakers, E.J., Nippold, F., Doucouliagos, H., Ioannidis, J.P., Otte, W.M., Sladekova, M., **Deressa, T.K.**, Bruns, S.B. and Fanelli, D., 2024. Footprint of publication selection bias on meta-analyses in medicine, environmental sciences, psychology, and economics. _Res. Synth. Methods_, 15(3), pp.500-511. [DOI](https://doi.org/10.1002/jrsm.1703).
+
+5\. **Deressa, T.K.**, Stern, D., Vangronsveld, J., Minx, J., Lizin, S., Malina, R. and Bruns, S., 2023. More than half of statistically significant research findings in the environmental sciences are actually not. _Preprint_. [DOI](https://doi.org/10.32942/X24G6Z).<br>&emsp;&emsp;Media attention: **De Morgen** in Dutch - [www.demorgen.be](https://www.demorgen.be/nieuws/meer-dan-de-helft-van-het-onderzoek-in-de-milieuwetenschappen-deugt-niet-studies-beweren-dingen-die-onvoldoende-onderbouwd-zijn~bca6f9d4/) and **Le Point** in French - [www.lepoint.fr](https://www.lepoint.fr/environnement/sciences-de-l-environnement-donnees-robustes-ou-conjectures-incertaines-31-01-2023-2506970_1927.php#11).
+
+4\. Sebu, A.T., Genati, K.T., Bekalo, D.B. and **Deressa, T.K.**, 2020. Spatiotemporal dynamics of tuberculosis in East Hararge zone, Oromiya region, Ethiopia. _Spat. Inf. Res._, 28(6), pp.623-633. [DOI](https://doi.org/10.1007/s41324-020-00319-9).
+
+3\. Temesgen, A. and **Deressa, T.K.**, 2016. Joint modeling of longitudinal CD4 count and weight measurements of HIV/tuberculosis co-infected patients at Jimma University specialized hospital. _Ann. Data Sc._, 3(3), pp.321-338. [DOI](https://doi.org/10.1007/s40745-016-0085-9).
+
+2\. Geneti, Kasahun T. and **Deressa, T.K.** 2014. Correlates of under-five child mortality in Ethiopia: A logistic regression analysis. _Adv. App. Stat._ 39 (1): 61.
+
+1\. **Deressa, T.K.** 2012. Application of multilevel logistic model to identify correlates of poverty in Ethiopia. _East Afr. J. Sci._ 6(2): 137-146.
 
 ---
 
