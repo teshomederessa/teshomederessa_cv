@@ -1,47 +1,3 @@
----
-output:
-  github_document:
-    html_preview: false
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
-
-# Takes a character vector with ONE string per publication, in any order.
-#  - The year is read automatically (first 4-digit year, 1900-2099, in the entry).
-#  - Entries are sorted newest first; the same year keeps the order you typed.
-#  - Numbers count DOWN (newest = highest). They are written as "7\." so
-#    Markdown prints them as plain text instead of auto-numbering upward.
-#  - Your name is bolded automatically.
-#  - Optional extra line (e.g. media attention): add " || " after the entry,
-#    then the extra text.
-print_countdown <- function(entries, my_name = "Deressa, T.K.") {
-  parts <- strsplit(entries, "\\s*\\|\\|\\s*")
-  txt   <- vapply(parts, function(p) p[1], character(1))
-  note  <- vapply(parts, function(p) if (length(p) > 1) p[2] else "", character(1))
-
-  # read the year from each entry
-  m    <- regexpr("(19|20)[0-9]{2}", txt)
-  year <- suppressWarnings(as.integer(substr(txt, m, m + 3)))
-  if (anyNA(year)) {
-    stop("No year found in: ", paste(txt[is.na(year)], collapse = " | "))
-  }
-
-  # sort: newest first, ties keep typed order
-  ord  <- order(-year, seq_along(year))
-  txt  <- txt[ord]
-  note <- note[ord]
-  n    <- length(txt)
-
-  # bold own name automatically
-  txt <- gsub(my_name, paste0("**", my_name, "**"), txt, fixed = TRUE)
-
-  extra <- ifelse(note == "", "", paste0("<br>&emsp;&emsp;", note))
-
-  cat(paste0(n:1, "\\. ", txt, extra, "\n\n", collapse = ""))
-}
-```
-
 <h2 align="center">Teshome K. Deressa, PhD</h2>
 
 ### Experience
@@ -104,22 +60,14 @@ print_countdown <- function(entries, my_name = "Deressa, T.K.") {
 
 ### Publications
 
-```{r publications, results='asis'}
-# To add a publication: add ONE new line to this vector (any position).
-# Format: "Authors, YEAR. Title. _Journal_, vol(issue), pages. [DOI](link)."
-# Optional note: end the entry with " || Your extra text".
-pubs <- c(
-  "Deressa, T.K., Stern, D., Vangronsveld, J., Minx, J., Lizin, S., Malina, R. and Bruns, S., 2023. More than half of statistically significant research findings in the environmental sciences are actually not. _Preprint_. [DOI](https://doi.org/10.32942/X24G6Z). || Media attention: **De Morgen** in Dutch - [www.demorgen.be](https://www.demorgen.be/nieuws/meer-dan-de-helft-van-het-onderzoek-in-de-milieuwetenschappen-deugt-niet-studies-beweren-dingen-die-onvoldoende-onderbouwd-zijn~bca6f9d4/) and **Le Point** in French - [www.lepoint.fr](https://www.lepoint.fr/environnement/sciences-de-l-environnement-donnees-robustes-ou-conjectures-incertaines-31-01-2023-2506970_1927.php#11).",
-  "Bruns, S.B., Deressa, T.K., Stanley, T.D., Doucouliagos, C. and Ioannidis, J.P., 2024. Estimating the extent of selective reporting: An application to economics. _Res. Synth. Methods_, 15(4), pp.590-602. [DOI](https://doi.org/10.1002/jrsm.1711).",
-  "Bartoš, F., Maier, M., Wagenmakers, E.J., Nippold, F., Doucouliagos, H., Ioannidis, J.P., Otte, W.M., Sladekova, M., Deressa, T.K., Bruns, S.B. and Fanelli, D., 2024. Footprint of publication selection bias on meta-analyses in medicine, environmental sciences, psychology, and economics. _Res. Synth. Methods_, 15(3), pp.500-511. [DOI](https://doi.org/10.1002/jrsm.1703).",
-  "Sebu, A.T., Genati, K.T., Bekalo, D.B. and Deressa, T.K., 2020. Spatiotemporal dynamics of tuberculosis in East Hararge zone, Oromiya region, Ethiopia. _Spat. Inf. Res._, 28(6), pp.623-633. [DOI](https://doi.org/10.1007/s41324-020-00319-9).",
-  "Temesgen, A. and Deressa, T.K., 2016. Joint modeling of longitudinal CD4 count and weight measurements of HIV/tuberculosis co-infected patients at Jimma University specialized hospital. _Ann. Data Sc._, 3(3), pp.321-338. [DOI](https://doi.org/10.1007/s40745-016-0085-9).",
-  "Geneti, Kasahun T. and Deressa, T.K. 2014. Correlates of under-five child mortality in Ethiopia: A logistic regression analysis. _Adv. App. Stat._ 39 (1): 61.",
-  "Deressa, T.K. 2012. Application of multilevel logistic model to identify correlates of poverty in Ethiopia. _East Afr. J. Sci._ 6(2): 137-146."
-)
-
-print_countdown(pubs)
-```
+1.  **Deressa, T.K.**, Stern, D., Vangronsveld, J., Minx, J., Lizin, S., Malina, R. and Bruns, S., 2023. More than half of statistically significant research findings in the environmental sciences are actually not. _Preprint_. [DOI](https://doi.org/10.32942/X24G6Z).
+      - Media attention: **De Morgen** in Dutch - [www.demorgen.be](https://www.demorgen.be/nieuws/meer-dan-de-helft-van-het-onderzoek-in-de-milieuwetenschappen-deugt-niet-studies-beweren-dingen-die-onvoldoende-onderbouwd-zijn~bca6f9d4/) and **Le Point** in French - [www.lepoint.fr](https://www.lepoint.fr/environnement/sciences-de-l-environnement-donnees-robustes-ou-conjectures-incertaines-31-01-2023-2506970_1927.php#11).
+2. Bruns, S.B., **Deressa, T.K.**, Stanley, T.D., Doucouliagos, C. and Ioannidis, J.P., 2024. Estimating the extent of selective reporting: An application to economics. _Res. Synth. Methods_, 15(4), pp.590-602. [DOI](https://doi.org/10.1002/jrsm.1711).
+3.  Bartoš, F., Maier, M., Wagenmakers, E.J., Nippold, F., Doucouliagos, H., Ioannidis, J.P., Otte, W.M., Sladekova, M., **Deressa, T.K.**, Bruns, S.B. and Fanelli, D., 2024. Footprint of publication selection bias on meta‐analyses in medicine, environmental sciences, psychology, and economics. _Res. Synth. Methods_, 15(3), pp.500-511. [DOI](https://doi.org/10.1002/jrsm.1703).
+4.  Sebu, A.T., Genati, K.T., Bekalo, D.B. and **Deressa, T.K.**, 2020. Spatiotemporal dynamics of tuberculosis in East Hararge zone, Oromiya region, Ethiopia. _Spat. Inf. Res._, 28(6), pp.623-633. [DOI](https://doi.org/10.1007/s41324-020-00319-9).
+5. Temesgen, A. and **Deressa, T.K.**, 2016. Joint modeling of longitudinal CD4 count and weight measurements of HIV/tuberculosis co-infected patients at Jimma University specialized hospital. _Ann. Data Sc._, 3(3), pp.321-338. [DOI](https://doi.org/10.1007/s40745-016-0085-9).
+6.  Geneti, Kasahun T. and **Deressa, T.K.** 2014. Correlates of under-five child mortality in Ethiopia: A logistic regression analysis. _Adv. App. Stat._ 39 (1): 61.
+7.  **Deressa, T.K.** 2012. Application of multilevel logistic model to identify correlates of poverty in Ethiopia. _East Afr. J. Sci._ 6(2): 137-146.
 
 ---
 
