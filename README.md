@@ -1,5 +1,4 @@
 ---
-title: ""
 output:
   github_document:
     html_preview: false
@@ -9,10 +8,10 @@ output:
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 # Prints a numbered list that counts DOWN (newest = highest number).
-# Numbers are written as "8\." so Markdown treats them as plain text
+# Numbers are written as "7\." so Markdown treats them as plain text
 # and does NOT turn them into an auto-numbered (counting-up) list.
 print_countdown <- function(df, my_name = "Deressa, T.K.") {
-  # newest first (stable order for same year)
+  # newest first
   df <- df[order(-df$year), ]
   n  <- nrow(df)
 
@@ -23,20 +22,8 @@ print_countdown <- function(df, my_name = "Deressa, T.K.") {
   extra <- ifelse(is.na(df$note) | df$note == "", "",
                   paste0("<br>&emsp;&emsp;", df$note))
 
-  cat('\n::: {.pubs}\n\n')
   cat(paste0(n:1, "\\. ", txt, extra, "\n\n", collapse = ""))
-  cat(':::\n\n')
 }
-```
-
-```{r css, echo=FALSE, results='asis'}
-# Writes the stylesheet next to the Rmd (so you don't need a separate file)
-writeLines('
-body { max-width: 900px; margin: 2em auto; font-family: "Helvetica Neue", Arial, sans-serif; line-height: 1.5; }
-h3 { border-bottom: 1px solid #ccc; padding-bottom: 3px; margin-top: 1.5em; }
-.pubs p { padding-left: 2em; text-indent: -2em; margin: 0.6em 0; }
-hr { border: 0; border-top: 1px solid #ddd; }
-', "cv.css")
 ```
 
 <h2 align="center">Teshome K. Deressa, PhD</h2>
