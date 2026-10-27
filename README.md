@@ -4,7 +4,7 @@
 
 ### Experience
 - Postdoctoral Researcher | University of Coimbra, **Portugal** (06/2025 - Present)
-   - Classified research publications by combining metadata enrichment from OpenAlex with AI-driven text analysis techniques ([OpenAlexAI](https://github.com/teshomey/ai-assisted-text-classification)) 
+   - Classified research publications by combining metadata enrichment from OpenAlex with AI-driven text analysis techniques ([OpenAlexAI](https://github.com/teshomederessa/ai_assisted_classification)) 
    - Applied Bayesian hierarchical Poisson modeling to assess the impact of journal policies on reducing inappropriate use of bar graphs for continuous data in biomedical research
    - Contributed to developing and validating an open-source R package for automated data extraction and classification
 - Data Curator & Analyst, Freelancer | FORRT, **Germany** (11/2024 - 09/2025)
@@ -28,7 +28,7 @@
 - Assistant Professor of Statistics | Haramaya University, **Ethiopia** (02/2017 - 09/2017)
 - Lecturer | Haramaya University, **Ethiopia** (07/2013 - 02/2017)
   - Taught various statistics courses
-  - Developed a module for _Introduction to Statistics_ course ([Stat101](https://raw.githubusercontent.com/teshomey/intro_to_stat_hu/main/Introduction%20to%20Statistics.pdf))
+  - Developed a module for _Introduction to Statistics_ course ([Stat101](https://raw.githubusercontent.com/teshomederessa/intro_to_stat_hu/main/Introduction%20to%20Statistics.pdf))
   - Published research in peer-reviewed journals on healthcare analytics and poverty analysis
   - Delivered professional training on R and SAS to researchers and industry stakeholders
 - Graduate Assistant | Haramaya University, **Ethiopia** (09/2009 - 07/2013)
@@ -64,10 +64,10 @@
 
 ---
 ### Selected conference presentations, invited talks, and others
-- Served as an external reviewer for the BSc Statistics curriculum at Wallaga University, Ethiopia. 15/06/2026. [Report](https://github.com/teshomey/curriculum_review_wu/blob/main/curriculum_review.pdf).
+- Served as an external reviewer for the BSc Statistics curriculum at Wallaga University, Ethiopia. 15/06/2026. [Report](https://github.com/teshomederessa/curriculum_review_wu/blob/main/curriculum_review.pdf).
 - _Sample Size Calculations with R and G*Power_. 21/01/2026. [PPT](https://osf.io/j2ntx/files/xf546)
-- _Machine Learning with Applications in Python_ for Oromia Health Bureau staff, Ethiopia. 11/10/2025. [PPT](https://github.com/teshomey/machine_learning/blob/main/ML%20with%20Application%20in%20Python.pdf).
-- _A Gentle Introduction to Python_ for Oromia Health Bureau staff, Ethiopia. 13/09/2025. [PPT](https://github.com/teshomey/machine_learning/blob/main/Introductiont%20to%20Python.pdf).
+- _Machine Learning with Applications in Python_ for Oromia Health Bureau staff, Ethiopia. 11/10/2025. [PPT](https://github.com/teshomederessa/machine_learning/blob/main/ML%20with%20Application%20in%20Python.pdf).
+- _A Gentle Introduction to Python_ for Oromia Health Bureau staff, Ethiopia. 13/09/2025. [PPT](https://github.com/teshomederessa/machine_learning/blob/main/Introductiont%20to%20Python.pdf).
 - _Evaluation of methods used to detect selective reporting_, MAER-Net Colloquium 2022, Kyoto University, Japan. 08/10/2022  
 - _Low power and overrepresentation of statistically significant findings in the environmental sciences_, Mercator Research Institute on Global Commons and Climate Change, Berlin, Germany. 28/09/2022
 - _Selective reporting and statistical power in environmental science_, MAER-Net Colloquium 2021, University of Piraeus, Greece. 23/10/2021
