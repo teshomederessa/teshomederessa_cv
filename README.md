@@ -63,6 +63,8 @@
 7.  **Deressa, T.K.** 2012. Application of multilevel logistic model to identify correlates of poverty in Ethiopia. _East Afr. J. Sci._ 6(2): 137-146.
 
 ---
+
+
 ### Selected conference presentations, invited talks, and others
 - Served as an external reviewer for the BSc Statistics curriculum at Wallaga University, Ethiopia. 15/06/2026. [Report](https://github.com/teshomederessa/curriculum_review_wu/blob/main/curriculum_review.pdf).
 - _Sample Size Calculations with R and G*Power_. 21/01/2026. [PPT](https://osf.io/j2ntx/files/xf546)
@@ -74,6 +76,83 @@
 - _Analysis of Variance Models using SAS_ for College of Agro-Industry and Land Resource staff, Haramaya University, Chiro Campus, Ethiopia. 25-26/06/2016
 - _LaTeX Document Preparation System using WinEdt Software_ for postgraduate students at the College of Computing and Informatics, Haramaya University, Main Campus, Ethiopia. 18-20/06/2015
 
+---
+
+```{r publications, echo=FALSE, results='asis'}
+publications <- c(
+  paste0(
+    "<strong>Deressa, T.K.</strong>, Stern, D., Vangronsveld, J., ",
+    "Minx, J., Lizin, S., Malina, R. and Bruns, S., 2023. ",
+    "More than half of statistically significant research findings ",
+    "in the environmental sciences are actually not. <em>Preprint</em>. ",
+    '<a href="https://doi.org/10.32942/X24G6Z">DOI</a>.',
+    "<ul><li>Media attention: <strong>De Morgen</strong> in Dutch - ",
+    '<a href="https://www.demorgen.be/nieuws/meer-dan-de-helft-van-het-onderzoek-in-de-milieuwetenschappen-deugt-niet-studies-beweren-dingen-die-onvoldoende-onderbouwd-zijn~bca6f9d4/">www.demorgen.be</a>',
+    " and <strong>Le Point</strong> in French - ",
+    '<a href="https://www.lepoint.fr/environnement/sciences-de-l-environnement-donnees-robustes-ou-conjectures-incertaines-31-01-2023-2506970_1927.php#11">www.lepoint.fr</a>.',
+    "</li></ul>"
+  ),
+
+  paste0(
+    "Bruns, S.B., <strong>Deressa, T.K.</strong>, Stanley, T.D., ",
+    "Doucouliagos, C. and Ioannidis, J.P., 2024. ",
+    "Estimating the extent of selective reporting: An application to economics. ",
+    "<em>Res. Synth. Methods</em>, 15(4), pp.590-602. ",
+    '<a href="https://doi.org/10.1002/jrsm.1711">DOI</a>.'
+  ),
+
+  paste0(
+    "Bartoš, F., Maier, M., Wagenmakers, E.J., Nippold, F., ",
+    "Doucouliagos, H., Ioannidis, J.P., Otte, W.M., Sladekova, M., ",
+    "<strong>Deressa, T.K.</strong>, Bruns, S.B. and Fanelli, D., 2024. ",
+    "Footprint of publication selection bias on meta-analyses in medicine, ",
+    "environmental sciences, psychology, and economics. ",
+    "<em>Res. Synth. Methods</em>, 15(3), pp.500-511. ",
+    '<a href="https://doi.org/10.1002/jrsm.1703">DOI</a>.'
+  ),
+
+  paste0(
+    "Sebu, A.T., Genati, K.T., Bekalo, D.B. and ",
+    "<strong>Deressa, T.K.</strong>, 2020. ",
+    "Spatiotemporal dynamics of tuberculosis in East Hararge zone, ",
+    "Oromiya region, Ethiopia. <em>Spat. Inf. Res.</em>, ",
+    "28(6), pp.623-633. ",
+    '<a href="https://doi.org/10.1007/s41324-020-00319-9">DOI</a>.'
+  ),
+
+  paste0(
+    "Temesgen, A. and <strong>Deressa, T.K.</strong>, 2016. ",
+    "Joint modeling of longitudinal CD4 count and weight measurements ",
+    "of HIV/tuberculosis co-infected patients at Jimma University ",
+    "specialized hospital. <em>Ann. Data Sc.</em>, 3(3), pp.321-338. ",
+    '<a href="https://doi.org/10.1007/s40745-016-0085-9">DOI</a>.'
+  ),
+
+  paste0(
+    "Geneti, Kasahun T. and <strong>Deressa, T.K.</strong>, 2014. ",
+    "Correlates of under-five child mortality in Ethiopia: A logistic ",
+    "regression analysis. <em>Adv. App. Stat.</em> 39 (1): 61."
+  ),
+
+  paste0(
+    "<strong>Deressa, T.K.</strong>, 2012. ",
+    "Application of multilevel logistic model to identify correlates ",
+    "of poverty in Ethiopia. <em>East Afr. J. Sci.</em> 6(2): 137-146."
+  )
+)
+
+# Count publications and generate descending numbering
+n <- length(publications)
+
+cat("<h3>Publications</h3>\n")
+cat("<ol reversed start='", n, "'>\n", sep = "")
+
+for (pub in publications) {
+  cat("<li>", pub, "</li>\n", sep = "")
+}
+
+cat("</ol>\n")
+```
 ---
 ### Teaching and supervision
 - Supervised 6 master theses at Hasselt University (2020 - 2023)
