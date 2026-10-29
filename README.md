@@ -3,8 +3,8 @@
 ### Experience
 
 - Postdoctoral Researcher | University of Coimbra, **Portugal** (06/2025 - Present)
-    - Classified research publications by combining metadata enrichment from OpenAlex with AI-driven text analysis techniques ([OpenAlexAI](https://github.com/teshomederessa/ai_assisted_classification))
     - Applied Bayesian hierarchical Poisson modeling to assess the impact of journal policies on reducing inappropriate use of bar graphs for continuous data in biomedical research
+    - Classified research publications by combining metadata enrichment from OpenAlex with AI-driven text analysis techniques ([OpenAlexAI](https://github.com/teshomederessa/ai_assisted_classification))
     - Contributed to developing and validating an open-source R package for automated data extraction and classification
 - Data Curator & Analyst, Freelancer | FORRT, **Germany** (11/2024 - 09/2025)
     - Extracted and coded data from 80+ published articles to expand research replication database ([FReD](https://forrt.org/apps/fred_explorer.html))
