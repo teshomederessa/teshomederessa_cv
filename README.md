@@ -59,6 +59,7 @@
 ---
 
 ### Publications
+1. Schulz, R., \textbf{Deressa, T. K.}, Barnett, A., Zalia, Y., Cunha-Oliveira, T., Victoria-Quilla Baselly Heibrich, C., Abbasi, P., Nachev, V., \& Weissgerber, T. L. (2026). Do journal policies reduce the use of bar graphs for visualizing continuous data? An observational study. *Under review in PLOS Biology*. [View the R code and dashboard](https://github.com/teshomederessa/journal_policy)
 
 1.  **Deressa, T.K.**, Stern, D., Vangronsveld, J., Minx, J., Lizin, S., Malina, R. and Bruns, S., 2023. More than half of statistically significant research findings in the environmental sciences are actually not. _Preprint_. [DOI](https://doi.org/10.32942/X24G6Z).
       - Media attention: **De Morgen** in Dutch - [www.demorgen.be](https://www.demorgen.be/nieuws/meer-dan-de-helft-van-het-onderzoek-in-de-milieuwetenschappen-deugt-niet-studies-beweren-dingen-die-onvoldoende-onderbouwd-zijn~bca6f9d4/) and **Le Point** in French - [www.lepoint.fr](https://www.lepoint.fr/environnement/sciences-de-l-environnement-donnees-robustes-ou-conjectures-incertaines-31-01-2023-2506970_1927.php#11).
